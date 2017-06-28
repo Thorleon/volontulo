@@ -241,7 +241,7 @@ class UserProfile(models.Model):
         return self.is_administrator
 
     def is_in_organization(self):
-        """Return True if current user is in any organization, else return False"""
+        """Return True if current user is in any organization"""
         return self.organizations.exists()
 
     def is_volunteer(self):
