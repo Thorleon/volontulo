@@ -4,6 +4,9 @@
 .. module:: api
 """
 
+from django.contrib.auth import authenticate, login
+from rest_framework.response import Response
+from rest_framework.views import APIView
 from rest_framework import viewsets
 
 from apps.volontulo import models
@@ -11,10 +14,6 @@ from apps.volontulo import permissions
 from apps.volontulo import serializers
 from apps.volontulo.authentication import CsrfExemptSessionAuthentication
 from apps.volontulo.views import logged_as_admin
-
-from django.contrib.auth import authenticate, login, logout
-from rest_framework.response import Response
-from rest_framework.views import APIView
 
 
 class LoginView(APIView):
@@ -30,6 +29,7 @@ class LoginView(APIView):
             username = request.data.get('username')
             password = request.data.get('password')
             user = authenticate(username=username, password=password)
+            import pdb; pdb.set_trace();
             if user is not None:
                 if user.is_active:
                     login(request, user)
