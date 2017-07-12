@@ -17,25 +17,29 @@ from apps.volontulo.views import logged_as_admin
 
 
 class LoginView(APIView):
+    """
+    REST Login view
+    """
     authentication_classes = (CsrfExemptSessionAuthentication,)
     permission_classes = ()
 
-    def post(self, request, format=None):
+    def post(self, request):
+        """POST from login"""
         content = {
             'success': False,
             'message': 'User is logged'
         }
-        if str(request.user) == 'AnonymousUser':
+        if not request.user.is_authenticated():
             username = request.data.get('username')
             password = request.data.get('password')
             user = authenticate(username=username, password=password)
-            import pdb; pdb.set_trace();
             if user is not None:
                 if user.is_active:
                     login(request, user)
                     content = {
                         'success': True,
-                        'message': 'Login success'
+                        'message': 'Login success',
+                        'username': username
                     }
                 else:
                     content = {
