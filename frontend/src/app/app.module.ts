@@ -5,19 +5,25 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
+import { HomeComponent } from './home.component';
 import { RedirectComponent, WindowToken, _window } from './redirect.component';
 
 const appRoutes: Routes = [
   {
+  path: '',
+  component: HomeComponent
+  },
+  {
     path: '**',
     component: RedirectComponent
-  }
+  },
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
-    RedirectComponent
+    RedirectComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
