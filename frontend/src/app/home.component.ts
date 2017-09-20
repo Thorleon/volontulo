@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 
+import { OffersComponent } from './offers/offers.component';
 import { UserService } from './user.service';
 
 @Component({

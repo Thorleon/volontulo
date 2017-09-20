@@ -6,12 +6,13 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home.component';
+import { OffersComponent } from './offers/offers.component';
 import { RedirectComponent, WindowToken, _window } from './redirect.component';
 
 const appRoutes: Routes = [
   {
-  path: '',
-  component: HomeComponent
+    path: '',
+    component: HomeComponent
   },
   {
     path: '**',
@@ -23,7 +24,8 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     RedirectComponent,
-    HomeComponent
+    HomeComponent,
+    OffersComponent
   ],
   imports: [
     BrowserModule,
