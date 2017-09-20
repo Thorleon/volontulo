@@ -8,15 +8,16 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppComponent } from './app.component';
 import { RedirectComponent } from './redirect.component';
 import { WindowService, WindowFactory } from './window.service';
+import { OffersComponent } from './offers/offers.component';
 import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 
 const appRoutes: Routes = [
-  // {
-  //   path: '',
-  //   component: HomeComponent
-  // },
+  {
+     path: '',
+     component: HomeComponent
+  },
   {
     path: '**',
     component: RedirectComponent
@@ -30,6 +31,7 @@ const appRoutes: Routes = [
     HomeComponent,
     HeaderComponent,
     FooterComponent,
+    OffersComponent
   ],
   imports: [
     BrowserModule,
