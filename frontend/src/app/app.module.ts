@@ -14,10 +14,10 @@ import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 
 const appRoutes: Routes = [
-  {
-     path: '',
-     component: HomeComponent
-  },
+  // {
+  //   path: '',
+  //   component: HomeComponent
+  // },
   {
     path: '**',
     component: RedirectComponent
