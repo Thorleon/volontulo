@@ -2,7 +2,7 @@
     border-radius: 5px;
 }
 
-.offer__title {
+.offer-title {
     font-size: 16px;
     font-weight: 600;
     margin: 0 0 8px;
@@ -10,17 +10,17 @@
     text-align: center;
 }
 
-.offer__link {
+.offer-link {
     color: black;
 }
 
-.offer__caption {
+.offer-caption {
     box-shadow: 0 0 10px rgba(67, 74, 84, 0.5);
     background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8) 0%, white 40%, white 100%);
     padding: 10px;
 }
 
-.offer__glyphicon {
+.offer-glyphicon {
     padding: 0px;
     min-width: 28px;
     line-height: 28px;
@@ -32,14 +32,14 @@
     border-bottom-color: #E6E9ED;
 }
 
-.offer__img {
+.offer-img {
     display: block;
     position: relative;
     margin: -10% -15% -30%;
     padding-top: 100%;
 }
 
-.offer__row {
+.offer-row {
     display: flex;
     align-items: center;
     border: 1px solid #E6E9ED;
@@ -47,7 +47,7 @@
     border-radius: 3px;
 }
 
-.offer__organizer {
+.offer-organizer {
     text-align: right;
 }
 

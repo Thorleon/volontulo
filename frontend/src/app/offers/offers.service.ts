@@ -2,9 +2,11 @@ import { Injectable } from '@angular/core';
 import { Headers, Http, Response, RequestOptions } from '@angular/http';
 import { Observable } from 'rxjs/Rx';
 
+import { environment } from '../../environments/environment';
+
 @Injectable()
 export class OffersService {
-  private url = 'http://localhost:8000/api/offers/';
+  private url = `${environment.apiRoot}/offers/`;
 
   constructor (
     private http: Http

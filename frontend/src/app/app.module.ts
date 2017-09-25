@@ -17,10 +17,10 @@ import { CookieLawBannerComponent } from './cookie-law-banner/cookie-law-banner.
 import { AboutUsComponent } from './static/about-us.component';
 
 const appRoutes: Routes = [
-  // {
-  //   path: '',
-  //   component: HomeComponent
-  // },
+  {
+     path: '',
+     component: HomeComponent
+  },
   {
     path: 'o-nas',
     component: AboutUsComponent
@@ -38,7 +38,7 @@ const appRoutes: Routes = [
     HomeComponent,
     HeaderComponent,
     FooterComponent,
-    OffersComponent
+    OffersComponent,
     CookieLawBannerComponent,
     AboutUsComponent
   ],

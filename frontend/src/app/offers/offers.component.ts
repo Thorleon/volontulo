@@ -1,10 +1,10 @@
-import {Component} from '@angular/core';
+import { Component } from '@angular/core';
 
-import {OffersService} from './offers.service';
-import {Offer} from './offers.model';
+import { OffersService } from './offers.service';
+import { Offer } from './offers.model';
 
 @Component({
-  selector: '<offers>',
+  selector: '<volontulo-offers>',
   templateUrl: './offers.component.html',
   styleUrls: ['./offers.component.css'],
   providers: [OffersService]
