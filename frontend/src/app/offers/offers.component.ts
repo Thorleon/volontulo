@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 import { OffersService } from './offers.service';
 import { Offer } from './offers.model';
@@ -9,20 +9,19 @@ import { Offer } from './offers.model';
   styleUrls: ['./offers.component.css'],
   providers: [OffersService]
 })
-export class OffersComponent {
+export class OffersComponent implements OnInit {
   offers: Array<Offer>;
 
   constructor(private offersService: OffersService) {
   }
 
-    ngOnInit() {
-     this.offersService.getOffers()
-      .subscribe(
-        offers => {
-            console.log(offers);
-            this.offers = offers;
-        }
-      )
-    }
+  ngOnInit() {
+   this.offersService.getOffers()
+    .subscribe(
+      offers => {
+        this.offers = offers;
+      }
+    );
+  }
 }
 

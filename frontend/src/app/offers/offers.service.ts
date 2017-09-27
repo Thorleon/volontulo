@@ -13,14 +13,8 @@ export class OffersService {
   ) {}
 
   getOffers() {
-    let headers: Headers = new Headers({
-      'Content-Type': 'application/json',
-      'Access-Control-Allow-Origin': '*'
-    });
-    let options: RequestOptions = new RequestOptions({ headers: headers });
-
-    return this.http.get(this.url, options)
-      .map((res:Response) => res.json())
+    return this.http.get(this.url, { withCredentials: true } )
+      .map((res: Response) => res.json())
       .catch(this.handleError);
   }
 
